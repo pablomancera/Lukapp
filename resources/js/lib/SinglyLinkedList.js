@@ -4,7 +4,7 @@ class Node {
         this.next = null;
     }
 }
-class SinglyLinkedList{
+window.SinglyLinkedList = class SinglyLinkedList{
 
     constructor() {
         this.head = new Node(null);

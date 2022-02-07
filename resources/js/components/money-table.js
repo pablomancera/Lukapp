@@ -16,9 +16,17 @@ $(function () {
                 item.created_at = new Date(Date.parse(item.created_at));
             });
             fillMoneyTable();
+            heapSort();
         });
 });
-
+function heapSort(){
+    let h = new MaxHeap(data,(x)=>{
+        return x.value;
+    });
+    while(h.peek()){
+        console.log(h.extractMax().value);
+    }
+}
 function fillMoneyTable() {
     let table = $("#money-table");
 
@@ -49,6 +57,12 @@ function fillMoneyTable() {
                             </td>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="text-left">${dateString}</div>
+                            </td>
+                            <td class="p-2 whitespace-nowrap">
+                                <div class="text-center">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Editar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Eliminar</button>
+                                </div>
                             </td>
                         </tr>
                         `);
