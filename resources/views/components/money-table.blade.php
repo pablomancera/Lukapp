@@ -1,4 +1,5 @@
 <x-search-bar></x-search-bar>
+<script src="/js/lib/max-heap.js"></script>
 <script src="/js/components/money-table.js"></script>
 <script>
     const type = "{{ $type }}";
@@ -22,6 +23,9 @@
                             </th>
                             <th class="p-2 whitespace-nowrap">
                                 <div class="font-semibold text-left">{{ $type == "fixed" ? "Próximo pago" : "fecha" }}</div>
+                            </th>
+                            <th class="p-2 whitespace-nowrap">
+                                <div class="font-semibold text-center">Acciones</div>
                             </th>
                         </tr>
                     </thead>

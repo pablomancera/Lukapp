@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/lib/max-heap.js": "/js/lib/max-heap.js",
+    "/js/lib/SinglyLinkedList.js": "/js/lib/SinglyLinkedList.js",
     "/js/components/money-table.js": "/js/components/money-table.js",
     "/css/app.css": "/css/app.css"
 }

@@ -2308,8 +2308,19 @@ $(function () {
       item.created_at = new Date(Date.parse(item.created_at));
     });
     fillMoneyTable();
+    heapSort();
   });
 });
+
+function heapSort() {
+  var h = new MaxHeap(data, function (x) {
+    return x.value;
+  });
+
+  while (h.peek()) {
+    console.log(h.extractMax().value);
+  }
+}
 
 function fillMoneyTable() {
   var table = $("#money-table");
@@ -2322,7 +2333,7 @@ function fillMoneyTable() {
     var d = new Date();
     d.setDate(d.getMonth() + (expense.day - 1));
     var dateString = type == "fixed" ? d.toDateString() : expense.created_at.toDateString();
-    table.append("\n                        <tr>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">".concat(expense.name, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left font-medium ").concat(color, " \">\n                                    $").concat(new Intl.NumberFormat().format(expense.value), "\n                                </div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">").concat(dateString, "</div>\n                            </td>\n                        </tr>\n                        "));
+    table.append("\n                        <tr>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">".concat(expense.name, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left font-medium ").concat(color, " \">\n                                    $").concat(new Intl.NumberFormat().format(expense.value), "\n                                </div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">").concat(dateString, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-center\">\n                                <button type=\"button\" class=\"btn btn-primary\" data-bs-dismiss=\"modal\">Editar</button>\n                                <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Eliminar</button>\n                                </div>\n                            </td>\n                        </tr>\n                        "));
   });
 }
 })();
