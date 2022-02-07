@@ -4,4 +4,5 @@
             Ahorros
         </h2>
     </x-slot>
+    <x-money-table route="/expenses/variable" type="variable" color="text-red-500">gasto</x-money-table>
 </x-app-layout>
