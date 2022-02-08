@@ -38,3 +38,4 @@
 </div>
 <x-money-table-modal :type="$type" :route="$route">{{ $slot }}</x-money-table-modal>
 <x-edit-money-table-modal :type="$type" :route="$route">{{ $slot }}</x-edit-money-table-modal>
+<x-delete-money-table-modal :type="$type" :route="$route">{{ $slot }}</x-delete-money-table-modal>
