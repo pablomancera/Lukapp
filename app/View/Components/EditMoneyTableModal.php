@@ -8,17 +8,15 @@ class EditMoneyTableModal extends Component
 {
     public $type;
     public $route;
-    public $color;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($type, $route, $color)
+    public function __construct($type, $route)
     {
         $this->type = $type;
         $this->route = $route;
-        $this->color = $color;
     }
 
     /**
