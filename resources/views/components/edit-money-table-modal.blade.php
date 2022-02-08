@@ -12,22 +12,22 @@
                 <div class="modal-body">
                     <div class="input-group form-floating mb-3">
                         <input type="text" class="form-control" id="name" name="name" placeholder="nombre">
-                        <label class="z-10" for="name">Nombretest</label>
+                        <label class="z-10" for="name">Nombre</label>
                     </div>
                     <div class="input-group form-floating mb-3">
                         <input type="number" class="form-control" id="value" name="value" placeholder="nombre">
-                        <label class="z-10" for="value">Valortest</label>
+                        <label class="z-10" for="value">Valor</label>
                     </div>
                     @if ($type == "fixed")
                     <div class="input-group form-floating mb-3">
                         <input type="number" class="form-control" id="day" name="day" placeholder="nombre">
-                        <label class="z-10" for="day">Díatest</label>
+                        <label class="z-10" for="day">Día</label>
                     </div>
                     @endif
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelartest</button>
-                    <input type="submit" class="btn btn-primary" value="Guardartest"></input>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <input type="submit" class="btn btn-primary" value="Guardar"></input>
                 </div>
             </form>
         </div>

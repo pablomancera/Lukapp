@@ -2,6 +2,14 @@ const { default: axios } = require("axios");
 
 let data;
 
+/* const paragraph = document.getElementById("edit");
+const edit_button = document.getElementById("edit-button");
+
+edit_button.addEventListener("click", function() {
+    paragraph.contentEditable = true;
+    paragraph.style.backgroundColor = "#dddbdb";
+  } ); */
+
 $(function () {
     let d = new Date();
     axios
@@ -60,8 +68,8 @@ function fillMoneyTable() {
                             </td>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editMoneyModal">Edit</button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#moneyModal">Delete</button>
+                                <button type="submit" id="edit-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editMoneyModal">Edit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#deleteMoneyModal">Delete</button>
                                 </div>
                             </td>
                         </tr>

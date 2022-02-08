@@ -2296,6 +2296,14 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
     axios = _require["default"];
 
 var data;
+/* const paragraph = document.getElementById("edit");
+const edit_button = document.getElementById("edit-button");
+
+edit_button.addEventListener("click", function() {
+    paragraph.contentEditable = true;
+    paragraph.style.backgroundColor = "#dddbdb";
+  } ); */
+
 $(function () {
   var d = new Date();
   axios.get(route, {
@@ -2333,7 +2341,7 @@ function fillMoneyTable() {
     var d = new Date();
     d.setDate(d.getMonth() + (expense.day - 1));
     var dateString = type == "fixed" ? d.toDateString() : expense.created_at.toDateString();
-    table.append("\n                        <tr>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">".concat(expense.name, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left font-medium ").concat(color, " \">\n                                    $").concat(new Intl.NumberFormat().format(expense.value), "\n                                </div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">").concat(dateString, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-center\">\n                                <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#editMoneyModal\">Edit</button>\n                                <button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"modal\" data-bs-target=\"#moneyModal\">Delete</button>\n                                </div>\n                            </td>\n                        </tr>\n                        "));
+    table.append("\n                        <tr>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">".concat(expense.name, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left font-medium ").concat(color, " \">\n                                    $").concat(new Intl.NumberFormat().format(expense.value), "\n                                </div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-left\">").concat(dateString, "</div>\n                            </td>\n                            <td class=\"p-2 whitespace-nowrap\">\n                                <div class=\"text-center\">\n                                <button type=\"submit\" id=\"edit-button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#editMoneyModal\">Edit</button>\n                                <button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"modal\" data-bs-target=\"#deleteMoneyModal\">Delete</button>\n                                </div>\n                            </td>\n                        </tr>\n                        "));
   });
 }
 })();
