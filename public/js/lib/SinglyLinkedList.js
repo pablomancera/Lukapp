@@ -300,7 +300,7 @@ window.SinglyLinkedList = /*#__PURE__*/function () {
     }
   }, {
     key: "print",
-    value: function print() {
+    value: function print(count, cases) {
       var printNode = this.head.next;
 
       for (var j = 0; j < this.size(); j++) {

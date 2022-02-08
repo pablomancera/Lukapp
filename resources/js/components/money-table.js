@@ -60,8 +60,8 @@ function fillMoneyTable() {
                             </td>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Editar</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Eliminar</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editMoneyModal">Edit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#moneyModal">Delete</button>
                                 </div>
                             </td>
                         </tr>
