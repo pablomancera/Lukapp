@@ -190,7 +190,7 @@ window.SinglyLinkedList = class SinglyLinkedList{
         return false;
     }
 
-    print(){
+    print(count,cases){
         let printNode = this.head.next;
         for(let j=0;j<this.size();j++){
             if(j !== this.size()-1){
